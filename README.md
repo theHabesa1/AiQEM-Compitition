@@ -104,6 +104,20 @@ This project was created as part of the AiQem competition. If you encounter any 
 
 ---
 
+## Connect With Me 🤝
+
+Feel free to connect with me and explore more projects!
+
+[<img src="https://res.cloudinary.com/yd1738/image/upload/v1700224949/dij3imlp1xopuj8t6bqf.jpg" alt="My Logo" width="200"/>](https://your-website-or-profile-link)
+
+---
+
+<p align="center">
+  <img src="https://res.cloudinary.com/yd1738/image/upload/v1700224949/dij3imlp1xopuj8t6bqf.jpg" alt="My Logo" width="200"/>
+</p>
+
+
+
 
 
 
