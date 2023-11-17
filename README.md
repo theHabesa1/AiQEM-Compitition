@@ -1,6 +1,3 @@
-Certainly! Below is a template for your README file:
-
----
 
 # AiQem ToDo App
 
@@ -59,6 +56,10 @@ npm start
 ```
 
 The app will be accessible at [http://localhost:3000](http://localhost:3000) in your web browser.
+
+## Challenges During This Task 🤔
+
+I experienced some dependency issues initially. Additionally, I attempted to enhance my UI using [Driver.js](https://driverjs.com/) to make it more understandable for users. I successfully managed to integrate it by reading the documentation and exploring some repositories. 🚀
 
 ## Acknowledgments
 
