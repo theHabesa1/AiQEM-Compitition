@@ -12,12 +12,30 @@ import { doneSlice as done } from './redux/slice/done';
 import { StoreState } from './redux/store';
 import { IModel } from './types';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { driver } from "driver.js";
+import "driver.js/dist/driver.css";
+import React, { useEffect } from 'react';
 
 type TAllSilces = 'todo' | 'inProgress' | 'done';
 
 function App() {
   const dispatch = useDispatch();
   const appState = useSelector((state: StoreState) => state);
+  
+  useEffect(() => {
+    const driverObj = driver({
+      showProgress: true,
+      steps: [
+        { element: '.todo', popover: { title: 'ሠላም', description: 'This is Yareds to do app. Start by adding a task you want to complete', side: "left", align: 'start' }},
+        { element: '.inprog', popover: { title: 'In Progress', description: 'The Item you create is draggable. so drag it to the to do watch as the icons change', side: "bottom", align: 'start' }},
+        { element: '.done', popover: { title: 'Done ', description: 'When your done place it on the Done section or just click it', side: "bottom", align: 'start' }},
+      ]
+    });
+
+    driverObj.drive();
+
+  }, []); 
+  
 
   const onDragEnd = (result: DropResult) => {
     if (!result.destination) {
@@ -52,13 +70,13 @@ function App() {
     <Container>
       <Grid container spacing={3} justifyContent='center'>
         <DragDropContext onDragEnd={(res) => onDragEnd(res)}>
-          <Grid item md={4}>
+          <Grid item md={4} className="todo">
             <ToDoColumn />
           </Grid>
-          <Grid item md={4}>
+          <Grid item md={4} className="inprog">
             <InProgressColumn />
           </Grid>
-          <Grid item md={4}>
+          <Grid item md={4} className="done">
             <DoneColumn />
           </Grid>
         </DragDropContext>
