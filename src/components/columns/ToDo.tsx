@@ -23,7 +23,7 @@ export function ToDoColumn() {
 
       <ColumnLayout
         droppableId="todo"
-        labelText="Type 'to do' item"
+        labelText="Add a ToDo"
         completedHandler={completeStatus}
         removeHandler={remove}
         addHandler={add}

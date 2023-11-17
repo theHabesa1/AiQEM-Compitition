@@ -23,7 +23,7 @@ export function DoneColumn() {
       </Typography>
       <ColumnLayout
         droppableId="done"
-        labelText="Type 'done' item"
+        labelText="Add Task"
         completedHandler={completeStatus}
         removeHandler={remove}
         addHandler={add}

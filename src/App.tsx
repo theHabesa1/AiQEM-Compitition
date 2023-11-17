@@ -11,6 +11,7 @@ import { inProgressSlice as inProgress } from './redux/slice/inProgress';
 import { doneSlice as done } from './redux/slice/done';
 import { StoreState } from './redux/store';
 import { IModel } from './types';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 type TAllSilces = 'todo' | 'inProgress' | 'done';
 
@@ -61,6 +62,15 @@ function App() {
             <DoneColumn />
           </Grid>
         </DragDropContext>
+      </Grid>
+
+      <Grid container justifyContent='center' mt={4}>
+        <Typography variant='body1'>
+          Made By ያሬድ አበራ
+          <a href='https://github.com/theHabesa1' target='_blank' rel='noopener noreferrer'>
+            <GitHubIcon sx={{ ml: 1 }} />
+          </a>
+        </Typography>
       </Grid>
     </Container>
   );

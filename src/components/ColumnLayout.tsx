@@ -83,6 +83,7 @@ const ColumnLayout: React.FC<IColumnLayoutProps> = ({
 
   return (
     <Box borderRadius={1} width='100%' sx={{ boxShadow: 2, p: 3 }}>
+    {droppableId === 'todo' && (
       <TextField
         fullWidth
         label={labelText}
@@ -93,6 +94,7 @@ const ColumnLayout: React.FC<IColumnLayoutProps> = ({
         variant='outlined'
         size='small'
       />
+    )}
 
       <Collapse in={isError.isShow}>
         <Alert severity='error' sx={{ my: 1 }}>
@@ -101,6 +103,7 @@ const ColumnLayout: React.FC<IColumnLayoutProps> = ({
       </Collapse>
 
       <Box width='100%' display='flex' justifyContent='center'>
+      {droppableId === 'todo' && (
         <Button
           size='medium'
           sx={{ my: 1, maxWidth: 200 }}
@@ -113,8 +116,9 @@ const ColumnLayout: React.FC<IColumnLayoutProps> = ({
             textDescription.length === 0 || textDescription.length > 200
           }
         >
-          Add Item
+          Add
         </Button>
+        )}
       </Box>
       <Droppable droppableId={droppableId}>
         {(provided) => (
